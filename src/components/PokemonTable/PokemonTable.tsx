@@ -12,7 +12,7 @@ export const PokemonTable = () => {
         </tr>
         {filtered
           .map((p)=> (
-          <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+          <tr key={p.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
             <td className="px-3 py-4">{p.name.english}</td>
             <td className="px-3 py-4">{p.type.join(' ')}</td>
           </tr>
