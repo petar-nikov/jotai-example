@@ -1,10 +1,9 @@
-import {Provider, useAtom} from 'jotai'
-import {filterAtom} from 'store'
+import { Provider } from 'jotai'
 import { FilterInput } from 'components'
+import { List } from 'components/List/List';
 
 function App() {
-  const [filter] = useAtom(filterAtom);
-  return <main className="w-96 mx-auto mt-10"><FilterInput /> {filter} </main>
+  return <main className="w-96 mx-auto mt-10"><FilterInput /> <List /> </main>
 }
 
 export default () => <Provider> <App /> </Provider>
